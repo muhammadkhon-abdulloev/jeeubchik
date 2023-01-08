@@ -1,0 +1,39 @@
+postgres:
+  Host: "localhost"
+  Port: "55001"
+  User: "postgres"
+  Password: "postgres_password"
+  DBName: "contacts_db"
+  SSLMode: "disable" #require
+  PGDriver: "pgx"
+  Settings:
+    MaxOpenConns: 500
+    ConnMaxLifetime: 120
+    MaxIdleConns: 100
+    ConnMaxIdleTime: 20
+
+cookie:
+  name: "session-key"
+  maxAge: 1
+  secure: false
+  httpOnly: true
+  expire: 1
+
+redis:
+  host: "localhost"
+  port: 6379
+  minIdleConns: 200
+  poolSize: 12000
+  poolTimeout: 240
+  password: "jeeub"
+  db: 0
+
+server:
+  port: :1234
+
+logger:
+  development: true
+  disableCaller: false
+  disableStackrace: false
+  encoding: "json"
+  level: "info"
