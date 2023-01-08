@@ -9,5 +9,5 @@ func MapAccountRoutes(accountGroup *echo.Group, h *Handler, mw *middleware.Middl
 	accountGroup.POST("/login", h.Login())
 	accountGroup.POST("/register", h.Register())
 	accountGroup.POST("/logout", h.Logout(), mw.CookieMiddleware())
-	accountGroup.GET("/account", h.GetAccount(), mw.CookieMiddleware())
+	accountGroup.GET("", h.GetAccount(), mw.CookieMiddleware())
 }
