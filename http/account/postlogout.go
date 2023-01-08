@@ -18,6 +18,7 @@ func (h *Handler) Logout() echo.HandlerFunc {
 
 			return c.NoContent(http.StatusUnauthorized)
 		}
+
 		if cookie.Value == "" {
 			return c.NoContent(http.StatusUnauthorized)
 		}

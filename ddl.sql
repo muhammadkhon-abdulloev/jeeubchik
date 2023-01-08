@@ -1,3 +1,5 @@
+create database contacts_db;
+
 create schema account;
 
 create table account.account
